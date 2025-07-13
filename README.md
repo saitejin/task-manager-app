@@ -17,4 +17,4 @@ A simple and responsive task management app built using HTML, CSS, and AngularJS
 
 ## 🔗 Live Demo
 
-Deployed on Netlify: [https://your-site-name.netlify.app](https://your-site-name.netlify.app)
+Deployed on Netlify: [https://task-manager-saitej.netlify.app](https://task-manager-saitej.netlify.app)
