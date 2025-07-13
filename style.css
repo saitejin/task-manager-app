@@ -1,0 +1,102 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f7f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 50px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-section input, .input-section select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-section button {
+  padding: 10px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  background: #f1f1f1;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task-list .delete {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: red;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.6;
+}
+
+/* Priority Color Tags */
+.high {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.medium {
+  background-color: #ffc107;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.low {
+  background-color: #28a745;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+}

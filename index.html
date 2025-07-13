@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taskApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="taskController">
+
+  <div class="container">
+    <h1>📝 Task Manager</h1>
+
+    <div class="input-section">
+      <input type="text" ng-model="newTask.name" placeholder="Enter task..." />
+      <select ng-model="newTask.priority">
+        <option value="" disabled selected>Priority</option>
+        <option value="High">🔥 High</option>
+        <option value="Medium">⭐ Medium</option>
+        <option value="Low">🧊 Low</option>
+      </select>
+      <button ng-click="addTask()">Add Task</button>
+    </div>
+
+    <ul class="task-list">
+      <li ng-repeat="task in tasks">
+        <input type="checkbox" ng-model="task.completed">
+        <span ng-class="{'completed': task.completed}">
+          {{task.name}} - 
+          <strong ng-class="{
+            'high': task.priority === 'High',
+            'medium': task.priority === 'Medium',
+            'low': task.priority === 'Low'
+          }">{{task.priority}}</strong>
+        </span>
+        <button class="delete" ng-click="removeTask($index)">✖</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
